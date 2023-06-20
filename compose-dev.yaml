@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   ubuntu:
-    image: ubuntu:latest
+    image: continuumio/anaconda3
     ports:
       - "8888:8888"
     command: sleep infinity
