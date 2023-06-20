@@ -2,6 +2,8 @@ version: '3.8'
 services:
   ubuntu:
     image: ubuntu:latest
+    ports:
+      - "8888:8888"
     command: sleep infinity
     volumes:
       - .:/root
