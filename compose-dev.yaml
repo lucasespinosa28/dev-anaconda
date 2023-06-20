@@ -1,17 +1,7 @@
 version: '3.8'
 services:
-  anaconda:
-    image: continuumio/anaconda3
-    ports:
-      - "8888:8888"
-    command: /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+  ubuntu:
+    image: ubuntu:latest
+    command: sleep infinity
     volumes:
-      - .:/opt/notebooks
-  mongodb:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-volumes:
-  mongo_data:
+      - .:/root
