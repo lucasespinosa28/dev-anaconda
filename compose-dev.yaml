@@ -1,9 +1,18 @@
 version: '3.8'
 services:
-  ubuntu:
+  anaconda:
     image: continuumio/anaconda3
     ports:
       - "8888:8888"
     command: sleep infinity
     volumes:
       - .:/root
+  mongodb:
+  image: mongo
+    restart: always
+    environment:
+    
+MONGO_INITDB_ROOT_USERNAME: root
+MONGO_INITDB_ROOT_PASSWORD: example
+volumes:
+  mongo_data:  
